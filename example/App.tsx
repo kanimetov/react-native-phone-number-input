@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import PhoneInput from 'react-native-phone-number-input';
+import PhoneInput from 'qem-react-native-phone-number-input';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
               setFormattedValue(text);
               setCountryCode(phoneInput.current?.getCountryCode() || '');
             }}
-            countryPickerProps={{withAlphaFilter:true}}
+            countryPickerProps={{withAlphaFilter: true}}
             disabled={disabled}
             withDarkTheme
             withShadow
@@ -56,7 +56,8 @@ const App = () => {
               setShowMessage(true);
               setValid(checkValid ? checkValid : false);
               setCountryCode(phoneInput.current?.getCountryCode() || '');
-              let getNumberAfterPossiblyEliminatingZero = phoneInput.current?.getNumberAfterPossiblyEliminatingZero();
+              let getNumberAfterPossiblyEliminatingZero =
+                phoneInput.current?.getNumberAfterPossiblyEliminatingZero();
               console.log(getNumberAfterPossiblyEliminatingZero);
             }}>
             <Text style={styles.buttonText}>Check</Text>
@@ -66,7 +67,9 @@ const App = () => {
             onPress={() => {
               setDisabled(!disabled);
             }}>
-            <Text style={styles.buttonText}>{disabled ? 'Activate' : 'Disable'}</Text>
+            <Text style={styles.buttonText}>
+              {disabled ? 'Activate' : 'Disable'}
+            </Text>
           </TouchableOpacity>
         </SafeAreaView>
       </View>
@@ -100,12 +103,12 @@ const styles = StyleSheet.create({
     shadowRadius: 6.27,
     elevation: 10,
   },
-  buttonText:{
+  buttonText: {
     color: 'white',
     fontSize: 14,
   },
   redColor: {
-    backgroundColor: '#F57777'
+    backgroundColor: '#F57777',
   },
   message: {
     borderWidth: 1,
