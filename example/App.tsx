@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import PhoneInput from 'react-native-phone-number-input';
+import PhoneInput from 'qem-react-native-phone-number-input';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
